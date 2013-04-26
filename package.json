@@ -31,10 +31,11 @@
     "scripts": "lib/nodeunit.js",
     "files": "test/reporter.js",
     "browsers": {
+      "chrome": [25, "canary"],
       "ie": [8, 9, 10],
-      "firefox": [19],
+      "firefox": [19, "nightly"],
       "opera": [12],
-      "safari": [5.1],
+      "safari": [5.1, 6],
       "iphone": [6],
       "android-browser": [4.2]
     }
