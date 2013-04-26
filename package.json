@@ -1,0 +1,21 @@
+{
+  "name": "nodeunit-browser-tap",
+  "version": "0.0.0",
+  "description": "Nodeunit browser-side TAP reporter for use with TestlingCI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hurrymaplelad/nodeunit-browser-tap"
+  },
+  "keywords": [
+    "nodeunit",
+    "browser",
+    "tap",
+    "testling"
+  ],
+  "author": "Adam Hull <adam@hmlad.com>",
+  "license": "MIT"
+}
