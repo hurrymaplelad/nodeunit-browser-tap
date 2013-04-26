@@ -26,5 +26,17 @@
     "testling": "1.x",
     "browserify": "2.x",
     "sinon": "1.6.x"
+  },
+  "testling": {
+    "scripts": "lib/nodeunit.js",
+    "files": "test/reporter.js",
+    "browsers": {
+      "ie": [8, 9, 10],
+      "firefox": [19],
+      "opera": [12],
+      "safari": [5.1],
+      "iphone": [6],
+      "android-browser": [4.2]
+    }
   }
 }
