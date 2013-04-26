@@ -1,6 +1,6 @@
 {
   "name": "nodeunit-browser-tap",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Nodeunit browser-side TAP reporter for use with Testling CI",
   "main": "lib/reporter.js",
   "scripts": {
@@ -31,13 +31,32 @@
     "scripts": "lib/nodeunit.js",
     "files": "test/reporter.js",
     "browsers": {
-      "chrome": [25, "canary"],
-      "ie": [8, 9, 10],
-      "firefox": [19, "nightly"],
-      "opera": [12],
-      "safari": [5.1, 6],
-      "iphone": [6],
-      "android-browser": [4.2]
+      "chrome": [
+        25,
+        "canary"
+      ],
+      "ie": [
+        8,
+        9,
+        10
+      ],
+      "firefox": [
+        19,
+        "nightly"
+      ],
+      "opera": [
+        12
+      ],
+      "safari": [
+        5.1,
+        6
+      ],
+      "iphone": [
+        6
+      ],
+      "android-browser": [
+        4.2
+      ]
     }
   }
 }
