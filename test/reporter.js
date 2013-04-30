@@ -1,17 +1,31 @@
 var nodeunit = require('..'),
-    sinon = require('sinon'),
     fixtures = require('./fixtures'),
     testCase = nodeunit.testCase;
+    noop = function() {};
+
+function bufferStream(stream, done) {
+  stream.pipe({
+    output: '',
+    writable: true,
+    write: function (buf) {
+      this.output += String(buf);
+    },
+
+    end: function (msg) {
+      if (msg !== undefined) this.write(msg);
+      done(this.output);
+    },
+    destroy: noop,
+
+    // Event emitter
+    emit: noop,
+    on: noop,
+    removeListener: noop
+  });
+}
 
 function captureSuiteOutput(suite, done) {
-  var output = '';
-  sinon.stub(console, 'log', function(str) {
-    output += str;
-  });
-  nodeunit.run(suite, function() {
-    console.log.restore();
-    done(output);
-  });
+  bufferStream(nodeunit.run(suite), done);
 }
 
 nodeunit.run({'Browser TAP reporter': {

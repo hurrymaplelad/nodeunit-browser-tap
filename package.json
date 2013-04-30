@@ -19,13 +19,11 @@
   "author": "Adam Hull <adam@hmlad.com>",
   "license": "MIT",
   "dependencies": {
-    "tap-assert": "0.0.x",
-    "tap-producer": "0.0.x"
+    "tape": "0.3.x"
   },
   "devDependencies": {
     "testling": "1.x",
-    "browserify": "2.x",
-    "sinon": "1.6.x"
+    "browserify": "2.x"
   },
   "testling": {
     "scripts": "lib/nodeunit.js",
