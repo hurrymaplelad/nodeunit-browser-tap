@@ -3,7 +3,7 @@ module.exports = {
     "Ceci nes't pas une test": function(test) {
       test.notStrictEqual(this, 'une test');
       test.done();
-    },
+    }
   },
 
   failing: {
