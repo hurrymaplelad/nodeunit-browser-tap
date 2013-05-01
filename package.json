@@ -1,6 +1,6 @@
 {
   "name": "nodeunit-browser-tap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nodeunit browser-side TAP reporter for use with Testling CI",
   "main": "lib/reporter.js",
   "scripts": {
