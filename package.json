@@ -4,7 +4,7 @@
   "description": "Nodeunit browser-side TAP reporter for use with Testling CI",
   "main": "lib/reporter.js",
   "scripts": {
-    "test": "./node_modules/.bin/browserify test/reporter.js | cat lib/nodeunit.js - | ./node_modules/.bin/testling"
+    "test": "./node_modules/.bin/browserify test/reporter.js | ./node_modules/.bin/testling"
   },
   "repository": {
     "type": "git",
