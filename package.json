@@ -19,7 +19,7 @@
   "author": "Adam Hull <adam@hmlad.com>",
   "license": "MIT",
   "dependencies": {
-    "tape": "0.3.x"
+    "tape": "~2.3.2"
   },
   "devDependencies": {
     "testling": "1.x",

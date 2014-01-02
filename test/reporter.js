@@ -1,6 +1,6 @@
 var nodeunit = require('..'),
     fixtures = require('./fixtures'),
-    testCase = nodeunit.testCase;
+    tape = require('tape'),
     noop = function() {};
 
 function bufferStream(stream, done) {
@@ -25,7 +25,10 @@ function bufferStream(stream, done) {
 }
 
 function captureSuiteOutput(suite, done) {
-  bufferStream(nodeunit.run(suite), done);
+  var harness = tape.createHarness(),
+      stream = harness.createStream();
+  bufferStream(stream, done);
+  nodeunit.run(suite, {harness: harness});
 }
 
 nodeunit.run({'Browser TAP reporter': {
