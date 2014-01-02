@@ -1,27 +1,23 @@
 var nodeunit = require('..'),
     fixtures = require('./fixtures'),
     tape = require('tape'),
+    stream = require('stream'),
     noop = function() {};
 
-function bufferStream(stream, done) {
-  stream.pipe({
-    output: '',
-    writable: true,
-    write: function (buf) {
-      this.output += String(buf);
-    },
+function bufferStream(s, done) {
+  var output = '',
+      writable = new stream.Writable();
 
-    end: function (msg) {
-      if (msg !== undefined) this.write(msg);
-      done(this.output);
-    },
-    destroy: noop,
+  writable._write = function(buffer, encoding, done) {
+    output += buffer;
+    done();
+  }
 
-    // Event emitter
-    emit: noop,
-    on: noop,
-    removeListener: noop
+  writable.on('finish', function() {
+    done(output);
   });
+
+  s.pipe(writable);
 }
 
 function captureSuiteOutput(suite, done) {
