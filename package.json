@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "testling": "1.x",
-    "browserify": "2.x"
+    "browserify": "~3.18.0"
   },
   "testling": {
     "scripts": "lib/nodeunit.js",
