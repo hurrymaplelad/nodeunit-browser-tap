@@ -3,6 +3,8 @@
 
 [![browser support](https://ci.testling.com/hurrymaplelad/nodeunit-browser-tap.png)](https://ci.testling.com/hurrymaplelad/nodeunit-browser-tap)
 
+[![dependencies](https://gemnasium.com/hurrymaplelad/nodeunit-browser-tap.png)](https://gemnasium.com/hurrymaplelad/nodeunit-browser-tap)
+
 Like Nodeunit's baked-in TAP reporter, but meant to run in the browser following Testling's convention of writing test results to `console.log`.
 
 ## Usage
